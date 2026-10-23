@@ -1,0 +1,578 @@
+<bpWorkflow mCurrentStepIndex="4" mWorkflowId="b64a7c25-b39b-4f38-a979-96c0a41f50f4" mName="EV Workflow" mTimeInfo="2026-08-28T17-08-11.414">
+<bpWorkflowStepSurfacesCreation mName="Surfaces Creation =&gt; Surfaces 1" mIsExecuted="true" mDataId="700001" mInput="Image 100001 ReadOnly">
+<bpSurfacesCreationParameters mApplicationType="eApplication3D" mObjectsName="Surfaces 1" mFormatVersion="11.0" mEnableRebuild="false" mEnableRebuildDataId="18446744073709551615" mEnableRegionOfInterest="false" mProcessEntireImage="false" mEnableRegionGrowing="false" mEnableTracking="false" mEnableClassify="false" mRebuildSelectedStep="eCreationStepAlgorithm" mSourceImageIndex="0" mSourceChannelIndex="0" mEnableSmooth="true" mSurfaceGrainSize="0.41432" mEnableEliminateBackground="false" mDiameterOfLargestSphere="1.5537" mEnablePixelClassification="false" mEnableAutomaticThreshold="false" mManualThresholdValue="3167.31" mActiveThreshold="true" mEnableAutomaticThresholdB="true" mManualThresholdValueB="50655.8" mActiveThresholdB="false" mRegionGrowingEstimatedDiameter="2.0716" mRegionGrowingBackgroundSubtraction="true" mRegionGrowingMorphologicalSplit="false" mEnableShortestDistance="true" mSurfacesBaseColor="1 1 1" mTrackBaseColor="1 1 1" mEndStep="eCreationStepFinished" mSurfacesROIEnable="false" mSurfacesROIId="18446744073709551615">
+<bpRegionOfInterestContainer>
+<bpRegionOfInterest mMinXYZ="0 0 0" mMaxXYZ="1023 1023 11" mMinT="0" mMaxT="0" mName="Region of Interest 1" mActive="true" mSelected="false"/>
+</bpRegionOfInterestContainer>
+<mRegionGrowingFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="false" mLowerThresholdManualInitToAuto="true" mLowerThresholdManualValue="0" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="false" mManualThresholdValue="0.000" mInitManualThresholdToAuto="true">
+  <bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mRegionGrowingFilter>
+<mSurfacesFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="1586.69" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="1586.690" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Number of Voxels" mUnit="" mFactors="1" mFactorName0="Image" mFactorLevel0="Image 1"/>
+</bpStatisticsFilter>
+</mSurfacesFilter>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+<mTrackFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="2.5" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="2.500" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Track Duration Steps" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mTrackFilter>
+<mSurfacesClassificationParameters mCategory="Surface"/>
+<mSurfacesEventParameters mCategory="Surface"/>
+<bpCPixelClassificationParameters mClassSelection="1" mAllChannels="false" mPixelClassiferType="GBT">
+<bpCObjectsClassGroup>
+<bpCObjectsClassParameters0 mName="Background" mColor="0.8 0.1 0.8" mShow="true"/>
+<bpCObjectsClassParameters1 mName="Foreground" mColor="0 1 0.3" mShow="false"/>
+</bpCObjectsClassGroup>
+<mModel mModelSelection="false" mFeatureCompression="true"/>
+<mTrainingData mKeepTrainingData="true"/>
+<mPaintBrushStrokes mKeepPaintBrushStrokes="true"/>
+</bpCPixelClassificationParameters>
+</bpSurfacesCreationParameters>
+<Scene/>
+</bpWorkflowStepSurfacesCreation>
+<bpWorkflowStepSurfacesCreation mName="Surfaces Creation =&gt; Neurons" mIsExecuted="true" mDataId="700002" mInput="Image 100001 ReadOnly">
+<bpSurfacesCreationParameters mApplicationType="eApplication3D" mObjectsName="Neurons" mFormatVersion="11.0" mEnableRebuild="false" mEnableRebuildDataId="18446744073709551615" mEnableRegionOfInterest="false" mProcessEntireImage="false" mEnableRegionGrowing="false" mEnableTracking="false" mEnableClassify="false" mRebuildSelectedStep="eCreationStepAlgorithm" mSourceImageIndex="0" mSourceChannelIndex="2" mEnableSmooth="true" mSurfaceGrainSize="0.41432" mEnableEliminateBackground="false" mDiameterOfLargestSphere="1.5537" mEnablePixelClassification="false" mEnableAutomaticThreshold="false" mManualThresholdValue="396.15" mActiveThreshold="true" mEnableAutomaticThresholdB="true" mManualThresholdValueB="15138.2" mActiveThresholdB="false" mRegionGrowingEstimatedDiameter="2.0716" mRegionGrowingBackgroundSubtraction="true" mRegionGrowingMorphologicalSplit="false" mEnableShortestDistance="true" mSurfacesBaseColor="1 1 1" mTrackBaseColor="1 1 1" mEndStep="eCreationStepFinished" mSurfacesROIEnable="false" mSurfacesROIId="700001">
+<bpRegionOfInterestContainer>
+<bpRegionOfInterest mMinXYZ="0 0 0" mMaxXYZ="1023 1023 11" mMinT="0" mMaxT="0" mName="Region of Interest 1" mActive="true" mSelected="false"/>
+</bpRegionOfInterestContainer>
+<mRegionGrowingFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="false" mLowerThresholdManualInitToAuto="true" mLowerThresholdManualValue="0" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="false" mManualThresholdValue="0.000" mInitManualThresholdToAuto="true">
+  <bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mRegionGrowingFilter>
+<mSurfacesFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="10" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="10.000" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Number of Voxels" mUnit="" mFactors="1" mFactorName0="Image" mFactorLevel0="Image 1"/>
+</bpStatisticsFilter>
+</mSurfacesFilter>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+<mTrackFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="2.5" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="2.500" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Track Duration Steps" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mTrackFilter>
+<mSurfacesClassificationParameters mCategory="Surface"/>
+<mSurfacesEventParameters mCategory="Surface"/>
+<bpCPixelClassificationParameters mClassSelection="1" mAllChannels="false" mPixelClassiferType="GBT">
+<bpCObjectsClassGroup>
+<bpCObjectsClassParameters0 mName="Background" mColor="0.8 0.1 0.8" mShow="true"/>
+<bpCObjectsClassParameters1 mName="Foreground" mColor="0 1 0.3" mShow="false"/>
+</bpCObjectsClassGroup>
+<mModel mModelSelection="false" mFeatureCompression="true"/>
+<mTrainingData mKeepTrainingData="true"/>
+<mPaintBrushStrokes mKeepPaintBrushStrokes="true"/>
+</bpCPixelClassificationParameters>
+</bpSurfacesCreationParameters>
+<Scene/>
+</bpWorkflowStepSurfacesCreation>
+<bpWorkflowStepSpotsCreation mName="Spots Creation =&gt; EV" mIsExecuted="true" mDataId="200001" mInput="Image 100001 ReadOnly">
+<bpPointsCreationParameters mApplicationType="eApplication3D" mObjectsName="EV" mFormatVersion="11.0" mEnableRebuild="false" mEnableRebuildDataId="18446744073709551615" mEnableRegionOfInterest="false" mEnableRegionGrowing="false" mEnableTracking="false" mEnableClassify="false" mProcessEntireImage="false" mRebuildSelectedStep="eCreationStepAlgorithm" mSourceImageIndex="0" mSourceChannelIndex="1" mEstimatedDiameter="2.071602 2.071602 4.143204" mBackgroundSubtraction="true" mRegionGrowingType="eLocalContrast" mRegionGrowingAutomaticTreshold="true" mRegionGrowingManualThreshold="0" mRegionGrowingDiameter="eDiameterFromVolume" mCreateRegionChannel="false" mEnableShortestDistance="true" mSpotBaseColor="1 1 1" mTrackBaseColor="1 1 1" mEndStep="eCreationStepFinished" mSurfacesROIEnable="false" mSurfacesROIId="700001">
+<bpRegionOfInterestContainer>
+</bpRegionOfInterestContainer>
+<mSpotFilter>
+<bpStatisticsFilter mLowerThresholdEnable="false" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="174.733" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1" mSelectHigh="false" mManualThreshold="false" mManualThresholdValue="1.000" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mSpotFilter>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+<mTrackFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="2.5" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="2.500" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Track Duration Steps" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mTrackFilter>
+<mPointsClassificationParameters mCategory="Spot"/>
+<mPointsEventParameters mCategory="Spot"/>
+</bpPointsCreationParameters>
+<Scene/>
+</bpWorkflowStepSpotsCreation>
+<bpWorkflowStepSurfacesCreation mName="Surfaces Creation =&gt; EV" mIsExecuted="true" mDataId="700003" mInput="Image 100001 ReadOnly">
+<bpSurfacesCreationParameters mApplicationType="eApplication3D" mObjectsName="EV" mFormatVersion="11.0" mEnableRebuild="false" mEnableRebuildDataId="18446744073709551615" mEnableRegionOfInterest="false" mProcessEntireImage="false" mEnableRegionGrowing="true" mEnableTracking="false" mEnableClassify="false" mRebuildSelectedStep="eCreationStepAlgorithm" mSourceImageIndex="0" mSourceChannelIndex="1" mEnableSmooth="true" mSurfaceGrainSize="0.41432" mEnableEliminateBackground="true" mDiameterOfLargestSphere="1.5537" mEnablePixelClassification="false" mEnableAutomaticThreshold="false" mManualThresholdValue="2000" mActiveThreshold="true" mEnableAutomaticThresholdB="true" mManualThresholdValueB="48872.8" mActiveThresholdB="false" mRegionGrowingEstimatedDiameter="2.0716" mRegionGrowingBackgroundSubtraction="true" mRegionGrowingMorphologicalSplit="false" mEnableShortestDistance="true" mSurfacesBaseColor="1 1 1" mTrackBaseColor="1 1 1" mEndStep="eCreationStepFinished" mSurfacesROIEnable="false" mSurfacesROIId="700001">
+<bpRegionOfInterestContainer>
+<bpRegionOfInterest mMinXYZ="0 0 0" mMaxXYZ="1023 1023 11" mMinT="0" mMaxT="0" mName="Region of Interest 1" mActive="true" mSelected="false"/>
+</bpRegionOfInterestContainer>
+<mRegionGrowingFilter>
+<bpStatisticsFilter mLowerThresholdEnable="false" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="168.941" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1" mSelectHigh="false" mManualThreshold="false" mManualThresholdValue="1.000" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Quality" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mRegionGrowingFilter>
+<mSurfacesFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="10" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="false" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="10.000" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Number of Voxels" mUnit="" mFactors="1" mFactorName0="Image" mFactorLevel0="Image 1"/>
+</bpStatisticsFilter>
+</mSurfacesFilter>
+<bpObjectTrackingAlgorithmParameters TrackAlgoName="Autoregressive Motion" mFillGapEnable="false" mReferenceFramesId="0">
+<ObjectTrackingAlgorithmLinearAsignment MaxGapSize="3" MaxDistance="-1"/>
+</bpObjectTrackingAlgorithmParameters>
+<mTrackFilter>
+<bpStatisticsFilter mLowerThresholdEnable="true" mLowerThresholdManual="true" mLowerThresholdManualInitToAuto="false" mLowerThresholdManualValue="2.5" mUpperThresholdEnable="false" mUpperThresholdManual="false" mUpperThresholdManualInitToAuto="true" mUpperThresholdManualValue="1" mSelectHigh="true" mManualThreshold="true" mManualThresholdValue="2.500" mInitManualThresholdToAuto="false">
+  <bpStatisticsValueType mName="Track Duration Steps" mUnit="" mFactors="0"/>
+</bpStatisticsFilter>
+</mTrackFilter>
+<mSurfacesClassificationParameters mCategory="Surface"/>
+<mSurfacesEventParameters mCategory="Surface"/>
+<bpCPixelClassificationParameters mClassSelection="1" mAllChannels="false" mPixelClassiferType="GBT">
+<bpCObjectsClassGroup>
+<bpCObjectsClassParameters0 mName="Background" mColor="0.8 0.1 0.8" mShow="true"/>
+<bpCObjectsClassParameters1 mName="Foreground" mColor="0 1 0.3" mShow="false"/>
+</bpCObjectsClassGroup>
+<mModel mModelSelection="false" mFeatureCompression="true"/>
+<mTrainingData mKeepTrainingData="true"/>
+<mPaintBrushStrokes mKeepPaintBrushStrokes="true"/>
+</bpCPixelClassificationParameters>
+</bpSurfacesCreationParameters>
+<Scene/>
+</bpWorkflowStepSurfacesCreation>
+<bpWorkflowStepSnapshot mName="Snapshot" mIsExecuted="true" mFilePath="D:\2025-2026\Tai\EV uptake\081126_EV_uptake\Snapshots\&lt;FILENAME&gt;_2026-08-28T16-59-41.465.png" mInput="AllImagesAndObjects 18446744073709551615 ReadOnly">
+<WorkflowSnapshotSettings CopyToClipboard="true" CustomDirectory="" DPI="300.000" FixedHeight="1000" FixedWidth="1000" ImageOutputDirectory="SnapshotsSubdirectoryOfSourceImageDirectory" OpenSavedFileInDefaultImageViewer="true" SaveAsType="PNG Image (*.png)" SaveToFile="true" SizeType="Window" TransparentBackground="false"/>
+<WorkflowSnapshotScene>
+<bpSurfaceApplication>
+<bpComponentGroup>
+<bpSurfaceComponent>
+  <name>Scene</name>
+  <id>33</id>
+  <isHidden>false</isHidden>
+  <isNode>true</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.200,0.200,0.200))</ambientColor>
+    <diffuseColor>((1.000,1.000,1.000))</diffuseColor>
+    <specularColor>((0.000,0.000,0.000))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+<bpLightSource>
+<bpSurfaceComponent>
+  <name>Light Source 1</name>
+  <id>34</id>
+  <isHidden>false</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.200,0.200,0.200))</ambientColor>
+    <diffuseColor>((0.800,0.800,0.800))</diffuseColor>
+    <specularColor>((0.000,0.000,0.000))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+</bpSurfaceComponent>
+  <intensity>1.000</intensity>
+  <color red="1.000" green="0.900" blue="0.900"/>
+  <direction>0.40824831 -0.40824831 -0.81649655</direction>
+  <mFixToDataSet>false</mFixToDataSet>
+</bpLightSource>
+<bpFrame>
+<bpSurfaceComponent>
+  <name>Frame 1</name>
+  <id>35</id>
+  <isHidden>true</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.200,0.200,0.200))</ambientColor>
+    <diffuseColor>((1.000,1.000,1.000))</diffuseColor>
+    <specularColor>((0.000,0.000,0.000))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+</bpSurfaceComponent>
+  <LabelMaterial>
+    <LabelAmbientColor>((0.200,0.200,0.200))</LabelAmbientColor>
+    <LabelDiffuseColor>((0.800,0.800,0.800))</LabelDiffuseColor>
+    <LabelSpecularColor>((0.000,0.000,0.000))</LabelSpecularColor>
+    <LabelEmissiveColor>((0.000,0.000,0.000))</LabelEmissiveColor>
+    <LabelShininess>(0.200)</LabelShininess>
+    <LabelTransparency>(0.000)</LabelTransparency>
+  </LabelMaterial>
+  <bpFrameSettings mVisibleBox="true" mGridSpacing="10" mGridSpacing1="10" mGridSpacing2="10" mVisibleGrid="false" mVisibleBoxShading="false" mVisibleTickMarks="true" mVisibleCoordinateAxes="false" mFixToCamera="true" mGridTransparency="8" mShadingTransparency="8" mLineWidth="1" mLabelFontName="Arial" mLabelFontSize="14" mLabelFontBold="false" mLabelFontItalic="false" mLabelFontUnderline="false"/>
+<editorSettings dataId="100001" controlInCenter="true"/>
+</bpFrame>
+<bpVolumeRenderer>
+<bpSurfaceComponent>
+  <name>Volume</name>
+  <id>36</id>
+  <isHidden>false</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.200,0.200,0.200))</ambientColor>
+    <diffuseColor>((0.800,0.800,0.800))</diffuseColor>
+    <specularColor>((0.000,0.000,0.000))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+</bpSurfaceComponent>
+  <bpVolumeRendererBlend>
+    <Channel index="0">
+      <mBlendOpacityMode>eStep</mBlendOpacityMode>
+      <bpOpacityInfo>
+        <mOpacity index="0" mIntensity="0.000" mOpacity="0.000"/>
+        <mOpacity index="1" mIntensity="561.279" mOpacity="0.000"/>
+        <mOpacity index="2" mIntensity="28766.000" mOpacity="0.300"/>
+        <mOpacity index="3" mIntensity="54175.000" mOpacity="0.300"/>
+      </bpOpacityInfo>
+    </Channel>
+    <Channel index="1">
+      <mBlendOpacityMode>eStep</mBlendOpacityMode>
+      <bpOpacityInfo>
+        <mOpacity index="0" mIntensity="0.000" mOpacity="0.000"/>
+        <mOpacity index="1" mIntensity="511.492" mOpacity="0.000"/>
+        <mOpacity index="2" mIntensity="32767.500" mOpacity="0.300"/>
+        <mOpacity index="3" mIntensity="65535.000" mOpacity="0.300"/>
+      </bpOpacityInfo>
+    </Channel>
+    <Channel index="2">
+      <mBlendOpacityMode>eStep</mBlendOpacityMode>
+      <bpOpacityInfo>
+        <mOpacity index="0" mIntensity="0.000" mOpacity="0.000"/>
+        <mOpacity index="1" mIntensity="375.047" mOpacity="0.000"/>
+        <mOpacity index="2" mIntensity="16018.000" mOpacity="0.300"/>
+        <mOpacity index="3" mIntensity="30371.000" mOpacity="0.300"/>
+      </bpOpacityInfo>
+    </Channel>
+  </bpVolumeRendererBlend>
+  <bpVolumeRendererNormalShading>
+    <Channel index="0">
+      <mBlendOpacityMode>eStep</mBlendOpacityMode>
+      <bpOpacityInfo>
+        <mOpacity index="0" mIntensity="0.000" mOpacity="0.000"/>
+        <mOpacity index="1" mIntensity="561.279" mOpacity="0.000"/>
+        <mOpacity index="2" mIntensity="729.663" mOpacity="0.700"/>
+        <mOpacity index="3" mIntensity="54175.000" mOpacity="0.700"/>
+      </bpOpacityInfo>
+    </Channel>
+    <Channel index="1">
+      <mBlendOpacityMode>eStep</mBlendOpacityMode>
+      <bpOpacityInfo>
+        <mOpacity index="0" mIntensity="0.000" mOpacity="0.000"/>
+        <mOpacity index="1" mIntensity="511.492" mOpacity="0.000"/>
+        <mOpacity index="2" mIntensity="664.940" mOpacity="0.700"/>
+        <mOpacity index="3" mIntensity="65535.000" mOpacity="0.700"/>
+      </bpOpacityInfo>
+    </Channel>
+    <Channel index="2">
+      <mBlendOpacityMode>eStep</mBlendOpacityMode>
+      <bpOpacityInfo>
+        <mOpacity index="0" mIntensity="0.000" mOpacity="0.000"/>
+        <mOpacity index="1" mIntensity="375.047" mOpacity="0.000"/>
+        <mOpacity index="2" mIntensity="487.561" mOpacity="0.700"/>
+        <mOpacity index="3" mIntensity="30371.000" mOpacity="0.700"/>
+      </bpOpacityInfo>
+    </Channel>
+  </bpVolumeRendererNormalShading>
+  <renderingMode>MaxIntensityProjection</renderingMode>
+  <cutHighOrLow>1</cutHighOrLow>
+  <alphaValue>0.000</alphaValue>
+  <autoHide>true</autoHide>
+</bpVolumeRenderer>
+<bpSurfacesModelViewer>
+<bpSurfaceComponent>
+  <name>Surfaces 1</name>
+  <id>48</id>
+  <isHidden>false</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.000,0.000,0.000))</ambientColor>
+    <diffuseColor>((0.000,0.000,0.800))</diffuseColor>
+    <specularColor>((0.200,0.200,0.200))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+</bpSurfaceComponent>
+<bpGraphViewerState mSelectedObjectTypeIndex="0" mLayoutDirection="Vertical" mRenderingStyle="Normal" mShowObjects="true" mShowLabels="false"/>
+<bpMegaSurfacesProperties mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="0 0 0.8" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="84.41672516 88.36787415 4877.61425781" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="1.65728" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mStyle="eTriangle" mSlicerDirection="eSlicerStyleOblique" mSlicerPosition="-1" mSlicerRotation="0.00000000 0.00000000 1.00000000 0.00000000" mSlicerTranslation="84.41672516 88.36787415 4877.61425781" mCenterPointSize="5">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable/>
+<bpPixelClassificationProperties mTrainingVisibility="true" mPredictionVisibility="true" mTrainingVoxelVisibility="false" mInterpolateEnable="true"/>
+</bpMegaSurfacesProperties>
+<bpTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable/>
+<mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mTracksDirectPathMaterial mDiffusion="1 1 1" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorMappingTable/>
+</bpTracksProperties>
+<SurfacesBoundingBox mVolumeRenderingMode="MaxIntensityProjection" mBorderWidth="0.00000000 0.00000000 0.00000000"/>
+  <bpSurfacesId Value="700001"/>
+  <bpContourEditor>
+    <imageId>100001</imageId>
+    <slicerDirection>2</slicerDirection>
+    <planeVisibility>eNone</planeVisibility>
+    <autoResolution>true</autoResolution>
+    <resolutionFactor>0.500</resolutionFactor>
+    <preserveFeatures>false</preserveFeatures>
+    <autofitContinuityWeight>1.200</autofitContinuityWeight>
+    <autofitCurvatureWeight>1.000</autofitCurvatureWeight>
+    <autofitImageEnergyWeight>1.200</autofitImageEnergyWeight>
+    <autofitNeighbourhoodSize>3</autofitNeighbourhoodSize>
+    <autofitRelativeGaussSigma>1.000</autofitRelativeGaussSigma>
+    <autofitMaximumIterations>10</autofitMaximumIterations>
+    <autofitScaleSpaceContinuationIterations>2</autofitScaleSpaceContinuationIterations>
+    <autofitPresetImpact>2</autofitPresetImpact>
+    <autofitPresetShape>2</autofitPresetShape>
+    <autofitUsePreset>true</autofitUsePreset>
+    <selectedChannelIndex>0</selectedChannelIndex>
+    <channelSelection>1</channelSelection>
+  </bpContourEditor>
+  <bpContour>
+  </bpContour>
+</bpSurfacesModelViewer>
+<bpSurfacesModelViewer>
+<bpSurfaceComponent>
+  <name>Neurons</name>
+  <id>50</id>
+  <isHidden>false</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.000,0.000,0.000))</ambientColor>
+    <diffuseColor>((0.800,0.000,0.800))</diffuseColor>
+    <specularColor>((0.200,0.200,0.200))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.450)</transparency>
+  </material>
+</bpSurfaceComponent>
+<bpGraphViewerState mSelectedObjectTypeIndex="0" mLayoutDirection="Vertical" mRenderingStyle="Normal" mShowObjects="true" mShowLabels="false"/>
+<bpMegaSurfacesProperties mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0.45" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="0.8 0 0.8" mMaterialPresetName="Transparent 0" mMaterialPresetFresnelScale="1.5" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="1.65728" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mStyle="eTriangle" mSlicerDirection="eSlicerStyleOblique" mSlicerPosition="-1" mSlicerRotation="0.00000000 0.00000000 1.00000000 0.00000000" mSlicerTranslation="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mCenterPointSize="5">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable>0.50000000 0.00000000 1.00000000,0.48148149 0.00000000 1.00000000,0.46296296 0.00000000 1.00000000,0.44444445 0.00000000 1.00000000,0.42592591 0.00000000 1.00000000,0.40740740 0.00000000 1.00000000,0.38888890 0.00000000 1.00000000,0.37037039 0.00000000 1.00000000,0.35185185 0.00000000 1.00000000,0.33333331 0.00000000 1.00000000,0.31481481 0.00000000 1.00000000,0.29629630 0.00000000 1.00000000,0.27777779 0.00000000 1.00000000,0.25925925 0.00000000 1.00000000,0.24074075 0.00000000 1.00000000,0.22222221 0.00000000 1.00000000,0.20370370 0.00000000 1.00000000,0.18518519 0.00000000 1.00000000,0.16666666 0.00000000 1.00000000,0.14814815 0.00000000 1.00000000,
+0.12962964 0.00000000 1.00000000,0.11111110 0.00000000 1.00000000,0.09259260 0.00000000 1.00000000,0.07407406 0.00000000 1.00000000,0.05555555 0.00000000 1.00000000,0.03703704 0.00000000 1.00000000,0.01851851 0.00000000 1.00000000,0.00000000 0.00000000 1.00000000,0.00000000 0.01754386 1.00000000,0.00000000 0.03508772 1.00000000,0.00000000 0.05263158 1.00000000,0.00000000 0.07017544 1.00000000,0.00000000 0.08771930 1.00000000,0.00000000 0.10526316 1.00000000,0.00000000 0.12280702 1.00000000,0.00000000 0.14035088 1.00000000,0.00000000 0.15789473 1.00000000,0.00000000 0.17543860 1.00000000,0.00000000 0.19298245 1.00000000,0.00000000 0.21052632 1.00000000,
+0.00000000 0.22807017 1.00000000,0.00000000 0.24561404 1.00000000,0.00000000 0.26315790 1.00000000,0.00000000 0.28070176 1.00000000,0.00000000 0.29824561 1.00000000,0.00000000 0.31578946 1.00000000,0.00000000 0.33333334 1.00000000,0.00000000 0.35087720 1.00000000,0.00000000 0.36842105 1.00000000,0.00000000 0.38596490 1.00000000,0.00000000 0.40350878 1.00000000,0.00000000 0.42105263 1.00000000,0.00000000 0.43859649 1.00000000,0.00000000 0.45614034 1.00000000,0.00000000 0.47368422 1.00000000,0.00000000 0.49122807 1.00000000,0.00000000 0.50877196 1.00000000,0.00000000 0.52631581 1.00000000,0.00000000 0.54385966 1.00000000,0.00000000 0.56140351 1.00000000,
+0.00000000 0.57894737 1.00000000,0.00000000 0.59649122 1.00000000,0.00000000 0.61403507 1.00000000,0.00000000 0.63157892 1.00000000,0.00000000 0.64912283 1.00000000,0.00000000 0.66666669 1.00000000,0.00000000 0.68421054 1.00000000,0.00000000 0.70175439 1.00000000,0.00000000 0.71929824 1.00000000,0.00000000 0.73684210 1.00000000,0.00000000 0.75438595 1.00000000,0.00000000 0.77192980 1.00000000,0.00000000 0.78947371 1.00000000,0.00000000 0.80701756 1.00000000,0.00000000 0.82456142 1.00000000,0.00000000 0.84210527 1.00000000,0.00000000 0.85964912 1.00000000,0.00000000 0.87719297 1.00000000,0.00000000 0.89473683 1.00000000,0.00000000 0.91228068 1.00000000,
+0.00000000 0.92982459 1.00000000,0.00000000 0.94736844 1.00000000,0.00000000 0.96491230 1.00000000,0.00000000 0.98245615 1.00000000,0.00000000 1.00000000 1.00000000,0.00000000 1.00000000 0.98245615,0.00000000 1.00000000 0.96491230,0.00000000 1.00000000 0.94736844,0.00000000 1.00000000 0.92982459,0.00000000 1.00000000 0.91228068,0.00000000 1.00000000 0.89473683,0.00000000 1.00000000 0.87719297,0.00000000 1.00000000 0.85964912,0.00000000 1.00000000 0.84210527,0.00000000 1.00000000 0.82456142,0.00000000 1.00000000 0.80701756,0.00000000 1.00000000 0.78947365,0.00000000 1.00000000 0.77192986,0.00000000 1.00000000 0.75438595,0.00000000 1.00000000 0.73684210,
+0.00000000 1.00000000 0.71929824,0.00000000 1.00000000 0.70175439,0.00000000 1.00000000 0.68421054,0.00000000 1.00000000 0.66666663,0.00000000 1.00000000 0.64912283,0.00000000 1.00000000 0.63157892,0.00000000 1.00000000 0.61403513,0.00000000 1.00000000 0.59649122,0.00000000 1.00000000 0.57894737,0.00000000 1.00000000 0.56140351,0.00000000 1.00000000 0.54385966,0.00000000 1.00000000 0.52631581,0.00000000 1.00000000 0.50877190,0.00000000 1.00000000 0.49122804,0.00000000 1.00000000 0.47368419,0.00000000 1.00000000 0.45614034,0.00000000 1.00000000 0.43859649,0.00000000 1.00000000 0.42105263,0.00000000 1.00000000 0.40350878,0.00000000 1.00000000 0.38596493,
+0.00000000 1.00000000 0.36842108,0.00000000 1.00000000 0.35087717,0.00000000 1.00000000 0.33333331,0.00000000 1.00000000 0.31578946,0.00000000 1.00000000 0.29824561,0.00000000 1.00000000 0.28070176,0.00000000 1.00000000 0.26315790,0.00000000 1.00000000 0.24561405,0.00000000 1.00000000 0.22807020,0.00000000 1.00000000 0.21052629,0.00000000 1.00000000 0.19298244,0.00000000 1.00000000 0.17543858,0.00000000 1.00000000 0.15789473,0.00000000 1.00000000 0.14035088,0.00000000 1.00000000 0.12280703,0.00000000 1.00000000 0.10526317,0.00000000 1.00000000 0.08771932,0.00000000 1.00000000 0.07017541,0.00000000 1.00000000 0.05263156,0.00000000 1.00000000 0.03508770,
+0.00000000 1.00000000 0.01754385,0.00000000 1.00000000 0.00000000,0.01754386 1.00000000 0.00000000,0.03508772 1.00000000 0.00000000,0.05263158 1.00000000 0.00000000,0.07017544 1.00000000 0.00000000,0.08771930 1.00000000 0.00000000,0.10526316 1.00000000 0.00000000,0.12280702 1.00000000 0.00000000,0.14035088 1.00000000 0.00000000,0.15789473 1.00000000 0.00000000,0.17543860 1.00000000 0.00000000,0.19298245 1.00000000 0.00000000,0.21052632 1.00000000 0.00000000,0.22807017 1.00000000 0.00000000,0.24561404 1.00000000 0.00000000,0.26315790 1.00000000 0.00000000,0.28070176 1.00000000 0.00000000,0.29824561 1.00000000 0.00000000,0.31578946 1.00000000 0.00000000,
+0.33333334 1.00000000 0.00000000,0.35087720 1.00000000 0.00000000,0.36842105 1.00000000 0.00000000,0.38596490 1.00000000 0.00000000,0.40350878 1.00000000 0.00000000,0.42105263 1.00000000 0.00000000,0.43859649 1.00000000 0.00000000,0.45614034 1.00000000 0.00000000,0.47368422 1.00000000 0.00000000,0.49122807 1.00000000 0.00000000,0.50877196 1.00000000 0.00000000,0.52631581 1.00000000 0.00000000,0.54385966 1.00000000 0.00000000,0.56140351 1.00000000 0.00000000,0.57894737 1.00000000 0.00000000,0.59649122 1.00000000 0.00000000,0.61403507 1.00000000 0.00000000,0.63157892 1.00000000 0.00000000,0.64912283 1.00000000 0.00000000,0.66666669 1.00000000 0.00000000,
+0.68421054 1.00000000 0.00000000,0.70175439 1.00000000 0.00000000,0.71929824 1.00000000 0.00000000,0.73684210 1.00000000 0.00000000,0.75438595 1.00000000 0.00000000,0.77192980 1.00000000 0.00000000,0.78947371 1.00000000 0.00000000,0.80701756 1.00000000 0.00000000,0.82456142 1.00000000 0.00000000,0.84210527 1.00000000 0.00000000,0.85964912 1.00000000 0.00000000,0.87719297 1.00000000 0.00000000,0.89473683 1.00000000 0.00000000,0.91228068 1.00000000 0.00000000,0.92982459 1.00000000 0.00000000,0.94736844 1.00000000 0.00000000,0.96491230 1.00000000 0.00000000,0.98245615 1.00000000 0.00000000,1.00000000 1.00000000 0.00000000,1.00000000 0.98245615 0.00000000,
+1.00000000 0.96491230 0.00000000,1.00000000 0.94736844 0.00000000,1.00000000 0.92982459 0.00000000,1.00000000 0.91228068 0.00000000,1.00000000 0.89473683 0.00000000,1.00000000 0.87719297 0.00000000,1.00000000 0.85964912 0.00000000,1.00000000 0.84210527 0.00000000,1.00000000 0.82456142 0.00000000,1.00000000 0.80701756 0.00000000,1.00000000 0.78947365 0.00000000,1.00000000 0.77192986 0.00000000,1.00000000 0.75438595 0.00000000,1.00000000 0.73684210 0.00000000,1.00000000 0.71929824 0.00000000,1.00000000 0.70175439 0.00000000,1.00000000 0.68421054 0.00000000,1.00000000 0.66666663 0.00000000,1.00000000 0.64912283 0.00000000,1.00000000 0.63157892 0.00000000,
+1.00000000 0.61403513 0.00000000,1.00000000 0.59649122 0.00000000,1.00000000 0.57894737 0.00000000,1.00000000 0.56140351 0.00000000,1.00000000 0.54385966 0.00000000,1.00000000 0.52631581 0.00000000,1.00000000 0.50877190 0.00000000,1.00000000 0.49122804 0.00000000,1.00000000 0.47368419 0.00000000,1.00000000 0.45614034 0.00000000,1.00000000 0.43859649 0.00000000,1.00000000 0.42105263 0.00000000,1.00000000 0.40350878 0.00000000,1.00000000 0.38596493 0.00000000,1.00000000 0.36842108 0.00000000,1.00000000 0.35087717 0.00000000,1.00000000 0.33333331 0.00000000,1.00000000 0.31578946 0.00000000,1.00000000 0.29824561 0.00000000,1.00000000 0.28070176 0.00000000,
+1.00000000 0.26315790 0.00000000,1.00000000 0.24561405 0.00000000,1.00000000 0.22807020 0.00000000,1.00000000 0.21052629 0.00000000,1.00000000 0.19298244 0.00000000,1.00000000 0.17543858 0.00000000,1.00000000 0.15789473 0.00000000,1.00000000 0.14035088 0.00000000,1.00000000 0.12280703 0.00000000,1.00000000 0.10526317 0.00000000,1.00000000 0.08771932 0.00000000,1.00000000 0.07017541 0.00000000,1.00000000 0.05263156 0.00000000,1.00000000 0.03508770 0.00000000,1.00000000 0.01754385 0.00000000,1.00000000 0.00000000 0.00000000</mColorCodingColorTable>
+<bpPixelClassificationProperties mTrainingVisibility="true" mPredictionVisibility="true" mTrainingVoxelVisibility="false" mInterpolateEnable="true"/>
+</bpMegaSurfacesProperties>
+<bpTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable/>
+<mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mTracksDirectPathMaterial mDiffusion="1 1 1" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorMappingTable/>
+</bpTracksProperties>
+<SurfacesBoundingBox mVolumeRenderingMode="MaxIntensityProjection" mBorderWidth="0.00000000 0.00000000 0.00000000"/>
+  <bpSurfacesId Value="700002"/>
+  <bpContourEditor>
+    <imageId>100001</imageId>
+    <slicerDirection>2</slicerDirection>
+    <planeVisibility>eNone</planeVisibility>
+    <autoResolution>true</autoResolution>
+    <resolutionFactor>0.500</resolutionFactor>
+    <preserveFeatures>false</preserveFeatures>
+    <autofitContinuityWeight>1.200</autofitContinuityWeight>
+    <autofitCurvatureWeight>1.000</autofitCurvatureWeight>
+    <autofitImageEnergyWeight>1.200</autofitImageEnergyWeight>
+    <autofitNeighbourhoodSize>3</autofitNeighbourhoodSize>
+    <autofitRelativeGaussSigma>1.000</autofitRelativeGaussSigma>
+    <autofitMaximumIterations>10</autofitMaximumIterations>
+    <autofitScaleSpaceContinuationIterations>2</autofitScaleSpaceContinuationIterations>
+    <autofitPresetImpact>2</autofitPresetImpact>
+    <autofitPresetShape>2</autofitPresetShape>
+    <autofitUsePreset>true</autofitUsePreset>
+    <selectedChannelIndex>0</selectedChannelIndex>
+    <channelSelection>1</channelSelection>
+  </bpContourEditor>
+  <bpContour>
+  </bpContour>
+</bpSurfacesModelViewer>
+<bpPointsViewer>
+<bpSurfaceComponent>
+  <name>EV</name>
+  <id>51</id>
+  <isHidden>true</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.000,0.000,0.000))</ambientColor>
+    <diffuseColor>((0.213,0.800,0.000))</diffuseColor>
+    <specularColor>((0.112,0.200,0.080))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+</bpSurfaceComponent>
+<bpGraphViewerState mSelectedObjectTypeIndex="0" mLayoutDirection="Vertical" mRenderingStyle="Normal" mShowObjects="true" mShowLabels="false"/>
+<bpPointsProperties mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="0.213333 0.8 0" mMaterialPresetName="Phong_Basic" mMaterialPresetFresnelScale="1" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="false" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="2.76214" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mStyle="eSphere" mRadiusScale="1" mCenterPointSize="5" mRenderQuality="0.5">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable>0.50000000 0.00000000 1.00000000,0.48148149 0.00000000 1.00000000,0.46296296 0.00000000 1.00000000,0.44444445 0.00000000 1.00000000,0.42592591 0.00000000 1.00000000,0.40740740 0.00000000 1.00000000,0.38888890 0.00000000 1.00000000,0.37037039 0.00000000 1.00000000,0.35185185 0.00000000 1.00000000,0.33333331 0.00000000 1.00000000,0.31481481 0.00000000 1.00000000,0.29629630 0.00000000 1.00000000,0.27777779 0.00000000 1.00000000,0.25925925 0.00000000 1.00000000,0.24074075 0.00000000 1.00000000,0.22222221 0.00000000 1.00000000,0.20370370 0.00000000 1.00000000,0.18518519 0.00000000 1.00000000,0.16666666 0.00000000 1.00000000,0.14814815 0.00000000 1.00000000,
+0.12962964 0.00000000 1.00000000,0.11111110 0.00000000 1.00000000,0.09259260 0.00000000 1.00000000,0.07407406 0.00000000 1.00000000,0.05555555 0.00000000 1.00000000,0.03703704 0.00000000 1.00000000,0.01851851 0.00000000 1.00000000,0.00000000 0.00000000 1.00000000,0.00000000 0.01754386 1.00000000,0.00000000 0.03508772 1.00000000,0.00000000 0.05263158 1.00000000,0.00000000 0.07017544 1.00000000,0.00000000 0.08771930 1.00000000,0.00000000 0.10526316 1.00000000,0.00000000 0.12280702 1.00000000,0.00000000 0.14035088 1.00000000,0.00000000 0.15789473 1.00000000,0.00000000 0.17543860 1.00000000,0.00000000 0.19298245 1.00000000,0.00000000 0.21052632 1.00000000,
+0.00000000 0.22807017 1.00000000,0.00000000 0.24561404 1.00000000,0.00000000 0.26315790 1.00000000,0.00000000 0.28070176 1.00000000,0.00000000 0.29824561 1.00000000,0.00000000 0.31578946 1.00000000,0.00000000 0.33333334 1.00000000,0.00000000 0.35087720 1.00000000,0.00000000 0.36842105 1.00000000,0.00000000 0.38596490 1.00000000,0.00000000 0.40350878 1.00000000,0.00000000 0.42105263 1.00000000,0.00000000 0.43859649 1.00000000,0.00000000 0.45614034 1.00000000,0.00000000 0.47368422 1.00000000,0.00000000 0.49122807 1.00000000,0.00000000 0.50877196 1.00000000,0.00000000 0.52631581 1.00000000,0.00000000 0.54385966 1.00000000,0.00000000 0.56140351 1.00000000,
+0.00000000 0.57894737 1.00000000,0.00000000 0.59649122 1.00000000,0.00000000 0.61403507 1.00000000,0.00000000 0.63157892 1.00000000,0.00000000 0.64912283 1.00000000,0.00000000 0.66666669 1.00000000,0.00000000 0.68421054 1.00000000,0.00000000 0.70175439 1.00000000,0.00000000 0.71929824 1.00000000,0.00000000 0.73684210 1.00000000,0.00000000 0.75438595 1.00000000,0.00000000 0.77192980 1.00000000,0.00000000 0.78947371 1.00000000,0.00000000 0.80701756 1.00000000,0.00000000 0.82456142 1.00000000,0.00000000 0.84210527 1.00000000,0.00000000 0.85964912 1.00000000,0.00000000 0.87719297 1.00000000,0.00000000 0.89473683 1.00000000,0.00000000 0.91228068 1.00000000,
+0.00000000 0.92982459 1.00000000,0.00000000 0.94736844 1.00000000,0.00000000 0.96491230 1.00000000,0.00000000 0.98245615 1.00000000,0.00000000 1.00000000 1.00000000,0.00000000 1.00000000 0.98245615,0.00000000 1.00000000 0.96491230,0.00000000 1.00000000 0.94736844,0.00000000 1.00000000 0.92982459,0.00000000 1.00000000 0.91228068,0.00000000 1.00000000 0.89473683,0.00000000 1.00000000 0.87719297,0.00000000 1.00000000 0.85964912,0.00000000 1.00000000 0.84210527,0.00000000 1.00000000 0.82456142,0.00000000 1.00000000 0.80701756,0.00000000 1.00000000 0.78947365,0.00000000 1.00000000 0.77192986,0.00000000 1.00000000 0.75438595,0.00000000 1.00000000 0.73684210,
+0.00000000 1.00000000 0.71929824,0.00000000 1.00000000 0.70175439,0.00000000 1.00000000 0.68421054,0.00000000 1.00000000 0.66666663,0.00000000 1.00000000 0.64912283,0.00000000 1.00000000 0.63157892,0.00000000 1.00000000 0.61403513,0.00000000 1.00000000 0.59649122,0.00000000 1.00000000 0.57894737,0.00000000 1.00000000 0.56140351,0.00000000 1.00000000 0.54385966,0.00000000 1.00000000 0.52631581,0.00000000 1.00000000 0.50877190,0.00000000 1.00000000 0.49122804,0.00000000 1.00000000 0.47368419,0.00000000 1.00000000 0.45614034,0.00000000 1.00000000 0.43859649,0.00000000 1.00000000 0.42105263,0.00000000 1.00000000 0.40350878,0.00000000 1.00000000 0.38596493,
+0.00000000 1.00000000 0.36842108,0.00000000 1.00000000 0.35087717,0.00000000 1.00000000 0.33333331,0.00000000 1.00000000 0.31578946,0.00000000 1.00000000 0.29824561,0.00000000 1.00000000 0.28070176,0.00000000 1.00000000 0.26315790,0.00000000 1.00000000 0.24561405,0.00000000 1.00000000 0.22807020,0.00000000 1.00000000 0.21052629,0.00000000 1.00000000 0.19298244,0.00000000 1.00000000 0.17543858,0.00000000 1.00000000 0.15789473,0.00000000 1.00000000 0.14035088,0.00000000 1.00000000 0.12280703,0.00000000 1.00000000 0.10526317,0.00000000 1.00000000 0.08771932,0.00000000 1.00000000 0.07017541,0.00000000 1.00000000 0.05263156,0.00000000 1.00000000 0.03508770,
+0.00000000 1.00000000 0.01754385,0.00000000 1.00000000 0.00000000,0.01754386 1.00000000 0.00000000,0.03508772 1.00000000 0.00000000,0.05263158 1.00000000 0.00000000,0.07017544 1.00000000 0.00000000,0.08771930 1.00000000 0.00000000,0.10526316 1.00000000 0.00000000,0.12280702 1.00000000 0.00000000,0.14035088 1.00000000 0.00000000,0.15789473 1.00000000 0.00000000,0.17543860 1.00000000 0.00000000,0.19298245 1.00000000 0.00000000,0.21052632 1.00000000 0.00000000,0.22807017 1.00000000 0.00000000,0.24561404 1.00000000 0.00000000,0.26315790 1.00000000 0.00000000,0.28070176 1.00000000 0.00000000,0.29824561 1.00000000 0.00000000,0.31578946 1.00000000 0.00000000,
+0.33333334 1.00000000 0.00000000,0.35087720 1.00000000 0.00000000,0.36842105 1.00000000 0.00000000,0.38596490 1.00000000 0.00000000,0.40350878 1.00000000 0.00000000,0.42105263 1.00000000 0.00000000,0.43859649 1.00000000 0.00000000,0.45614034 1.00000000 0.00000000,0.47368422 1.00000000 0.00000000,0.49122807 1.00000000 0.00000000,0.50877196 1.00000000 0.00000000,0.52631581 1.00000000 0.00000000,0.54385966 1.00000000 0.00000000,0.56140351 1.00000000 0.00000000,0.57894737 1.00000000 0.00000000,0.59649122 1.00000000 0.00000000,0.61403507 1.00000000 0.00000000,0.63157892 1.00000000 0.00000000,0.64912283 1.00000000 0.00000000,0.66666669 1.00000000 0.00000000,
+0.68421054 1.00000000 0.00000000,0.70175439 1.00000000 0.00000000,0.71929824 1.00000000 0.00000000,0.73684210 1.00000000 0.00000000,0.75438595 1.00000000 0.00000000,0.77192980 1.00000000 0.00000000,0.78947371 1.00000000 0.00000000,0.80701756 1.00000000 0.00000000,0.82456142 1.00000000 0.00000000,0.84210527 1.00000000 0.00000000,0.85964912 1.00000000 0.00000000,0.87719297 1.00000000 0.00000000,0.89473683 1.00000000 0.00000000,0.91228068 1.00000000 0.00000000,0.92982459 1.00000000 0.00000000,0.94736844 1.00000000 0.00000000,0.96491230 1.00000000 0.00000000,0.98245615 1.00000000 0.00000000,1.00000000 1.00000000 0.00000000,1.00000000 0.98245615 0.00000000,
+1.00000000 0.96491230 0.00000000,1.00000000 0.94736844 0.00000000,1.00000000 0.92982459 0.00000000,1.00000000 0.91228068 0.00000000,1.00000000 0.89473683 0.00000000,1.00000000 0.87719297 0.00000000,1.00000000 0.85964912 0.00000000,1.00000000 0.84210527 0.00000000,1.00000000 0.82456142 0.00000000,1.00000000 0.80701756 0.00000000,1.00000000 0.78947365 0.00000000,1.00000000 0.77192986 0.00000000,1.00000000 0.75438595 0.00000000,1.00000000 0.73684210 0.00000000,1.00000000 0.71929824 0.00000000,1.00000000 0.70175439 0.00000000,1.00000000 0.68421054 0.00000000,1.00000000 0.66666663 0.00000000,1.00000000 0.64912283 0.00000000,1.00000000 0.63157892 0.00000000,
+1.00000000 0.61403513 0.00000000,1.00000000 0.59649122 0.00000000,1.00000000 0.57894737 0.00000000,1.00000000 0.56140351 0.00000000,1.00000000 0.54385966 0.00000000,1.00000000 0.52631581 0.00000000,1.00000000 0.50877190 0.00000000,1.00000000 0.49122804 0.00000000,1.00000000 0.47368419 0.00000000,1.00000000 0.45614034 0.00000000,1.00000000 0.43859649 0.00000000,1.00000000 0.42105263 0.00000000,1.00000000 0.40350878 0.00000000,1.00000000 0.38596493 0.00000000,1.00000000 0.36842108 0.00000000,1.00000000 0.35087717 0.00000000,1.00000000 0.33333331 0.00000000,1.00000000 0.31578946 0.00000000,1.00000000 0.29824561 0.00000000,1.00000000 0.28070176 0.00000000,
+1.00000000 0.26315790 0.00000000,1.00000000 0.24561405 0.00000000,1.00000000 0.22807020 0.00000000,1.00000000 0.21052629 0.00000000,1.00000000 0.19298244 0.00000000,1.00000000 0.17543858 0.00000000,1.00000000 0.15789473 0.00000000,1.00000000 0.14035088 0.00000000,1.00000000 0.12280703 0.00000000,1.00000000 0.10526317 0.00000000,1.00000000 0.08771932 0.00000000,1.00000000 0.07017541 0.00000000,1.00000000 0.05263156 0.00000000,1.00000000 0.03508770 0.00000000,1.00000000 0.01754385 0.00000000,1.00000000 0.00000000 0.00000000</mColorCodingColorTable>
+</bpPointsProperties>
+<bpTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Phong_Basic" mMaterialPresetFresnelScale="1" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="false" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable/>
+<mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mTracksDirectPathMaterial mDiffusion="1 1 1" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorMappingTable/>
+</bpTracksProperties>
+<bpROIProperties mVolumeRenderingMode="MaxIntensityProjection" mBorderWidth="0.00000000 0.00000000 0.00000000"/>
+  <bpPointsId Value="200001"/>
+</bpPointsViewer>
+<bpSurfacesModelViewer>
+<bpSurfaceComponent>
+  <name>EV</name>
+  <id>52</id>
+  <isHidden>false</isHidden>
+  <isNode>false</isNode>
+  <isExpanded>false</isExpanded>
+  <material>
+    <ambientColor>((0.000,0.000,0.000))</ambientColor>
+    <diffuseColor>((0.000,0.800,0.000))</diffuseColor>
+    <specularColor>((0.200,0.200,0.200))</specularColor>
+    <emissiveColor>((0.000,0.000,0.000))</emissiveColor>
+    <shininess>(0.200)</shininess>
+    <transparency>(0.000)</transparency>
+  </material>
+</bpSurfaceComponent>
+<bpGraphViewerState mSelectedObjectTypeIndex="0" mLayoutDirection="Vertical" mRenderingStyle="Normal" mShowObjects="true" mShowLabels="false"/>
+<bpMegaSurfacesProperties mColorCoding="eLabelColor" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="0 0.8 0" mMaterialPresetName="Texture - Lizard Skin" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="1.65728" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mStyle="eTriangle" mSlicerDirection="eSlicerStyleOblique" mSlicerPosition="-1" mSlicerRotation="0.00000000 0.00000000 1.00000000 0.00000000" mSlicerTranslation="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mCenterPointSize="5">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable>0.50000000 0.00000000 1.00000000,0.48148149 0.00000000 1.00000000,0.46296296 0.00000000 1.00000000,0.44444445 0.00000000 1.00000000,0.42592591 0.00000000 1.00000000,0.40740740 0.00000000 1.00000000,0.38888890 0.00000000 1.00000000,0.37037039 0.00000000 1.00000000,0.35185185 0.00000000 1.00000000,0.33333331 0.00000000 1.00000000,0.31481481 0.00000000 1.00000000,0.29629630 0.00000000 1.00000000,0.27777779 0.00000000 1.00000000,0.25925925 0.00000000 1.00000000,0.24074075 0.00000000 1.00000000,0.22222221 0.00000000 1.00000000,0.20370370 0.00000000 1.00000000,0.18518519 0.00000000 1.00000000,0.16666666 0.00000000 1.00000000,0.14814815 0.00000000 1.00000000,
+0.12962964 0.00000000 1.00000000,0.11111110 0.00000000 1.00000000,0.09259260 0.00000000 1.00000000,0.07407406 0.00000000 1.00000000,0.05555555 0.00000000 1.00000000,0.03703704 0.00000000 1.00000000,0.01851851 0.00000000 1.00000000,0.00000000 0.00000000 1.00000000,0.00000000 0.01754386 1.00000000,0.00000000 0.03508772 1.00000000,0.00000000 0.05263158 1.00000000,0.00000000 0.07017544 1.00000000,0.00000000 0.08771930 1.00000000,0.00000000 0.10526316 1.00000000,0.00000000 0.12280702 1.00000000,0.00000000 0.14035088 1.00000000,0.00000000 0.15789473 1.00000000,0.00000000 0.17543860 1.00000000,0.00000000 0.19298245 1.00000000,0.00000000 0.21052632 1.00000000,
+0.00000000 0.22807017 1.00000000,0.00000000 0.24561404 1.00000000,0.00000000 0.26315790 1.00000000,0.00000000 0.28070176 1.00000000,0.00000000 0.29824561 1.00000000,0.00000000 0.31578946 1.00000000,0.00000000 0.33333334 1.00000000,0.00000000 0.35087720 1.00000000,0.00000000 0.36842105 1.00000000,0.00000000 0.38596490 1.00000000,0.00000000 0.40350878 1.00000000,0.00000000 0.42105263 1.00000000,0.00000000 0.43859649 1.00000000,0.00000000 0.45614034 1.00000000,0.00000000 0.47368422 1.00000000,0.00000000 0.49122807 1.00000000,0.00000000 0.50877196 1.00000000,0.00000000 0.52631581 1.00000000,0.00000000 0.54385966 1.00000000,0.00000000 0.56140351 1.00000000,
+0.00000000 0.57894737 1.00000000,0.00000000 0.59649122 1.00000000,0.00000000 0.61403507 1.00000000,0.00000000 0.63157892 1.00000000,0.00000000 0.64912283 1.00000000,0.00000000 0.66666669 1.00000000,0.00000000 0.68421054 1.00000000,0.00000000 0.70175439 1.00000000,0.00000000 0.71929824 1.00000000,0.00000000 0.73684210 1.00000000,0.00000000 0.75438595 1.00000000,0.00000000 0.77192980 1.00000000,0.00000000 0.78947371 1.00000000,0.00000000 0.80701756 1.00000000,0.00000000 0.82456142 1.00000000,0.00000000 0.84210527 1.00000000,0.00000000 0.85964912 1.00000000,0.00000000 0.87719297 1.00000000,0.00000000 0.89473683 1.00000000,0.00000000 0.91228068 1.00000000,
+0.00000000 0.92982459 1.00000000,0.00000000 0.94736844 1.00000000,0.00000000 0.96491230 1.00000000,0.00000000 0.98245615 1.00000000,0.00000000 1.00000000 1.00000000,0.00000000 1.00000000 0.98245615,0.00000000 1.00000000 0.96491230,0.00000000 1.00000000 0.94736844,0.00000000 1.00000000 0.92982459,0.00000000 1.00000000 0.91228068,0.00000000 1.00000000 0.89473683,0.00000000 1.00000000 0.87719297,0.00000000 1.00000000 0.85964912,0.00000000 1.00000000 0.84210527,0.00000000 1.00000000 0.82456142,0.00000000 1.00000000 0.80701756,0.00000000 1.00000000 0.78947365,0.00000000 1.00000000 0.77192986,0.00000000 1.00000000 0.75438595,0.00000000 1.00000000 0.73684210,
+0.00000000 1.00000000 0.71929824,0.00000000 1.00000000 0.70175439,0.00000000 1.00000000 0.68421054,0.00000000 1.00000000 0.66666663,0.00000000 1.00000000 0.64912283,0.00000000 1.00000000 0.63157892,0.00000000 1.00000000 0.61403513,0.00000000 1.00000000 0.59649122,0.00000000 1.00000000 0.57894737,0.00000000 1.00000000 0.56140351,0.00000000 1.00000000 0.54385966,0.00000000 1.00000000 0.52631581,0.00000000 1.00000000 0.50877190,0.00000000 1.00000000 0.49122804,0.00000000 1.00000000 0.47368419,0.00000000 1.00000000 0.45614034,0.00000000 1.00000000 0.43859649,0.00000000 1.00000000 0.42105263,0.00000000 1.00000000 0.40350878,0.00000000 1.00000000 0.38596493,
+0.00000000 1.00000000 0.36842108,0.00000000 1.00000000 0.35087717,0.00000000 1.00000000 0.33333331,0.00000000 1.00000000 0.31578946,0.00000000 1.00000000 0.29824561,0.00000000 1.00000000 0.28070176,0.00000000 1.00000000 0.26315790,0.00000000 1.00000000 0.24561405,0.00000000 1.00000000 0.22807020,0.00000000 1.00000000 0.21052629,0.00000000 1.00000000 0.19298244,0.00000000 1.00000000 0.17543858,0.00000000 1.00000000 0.15789473,0.00000000 1.00000000 0.14035088,0.00000000 1.00000000 0.12280703,0.00000000 1.00000000 0.10526317,0.00000000 1.00000000 0.08771932,0.00000000 1.00000000 0.07017541,0.00000000 1.00000000 0.05263156,0.00000000 1.00000000 0.03508770,
+0.00000000 1.00000000 0.01754385,0.00000000 1.00000000 0.00000000,0.01754386 1.00000000 0.00000000,0.03508772 1.00000000 0.00000000,0.05263158 1.00000000 0.00000000,0.07017544 1.00000000 0.00000000,0.08771930 1.00000000 0.00000000,0.10526316 1.00000000 0.00000000,0.12280702 1.00000000 0.00000000,0.14035088 1.00000000 0.00000000,0.15789473 1.00000000 0.00000000,0.17543860 1.00000000 0.00000000,0.19298245 1.00000000 0.00000000,0.21052632 1.00000000 0.00000000,0.22807017 1.00000000 0.00000000,0.24561404 1.00000000 0.00000000,0.26315790 1.00000000 0.00000000,0.28070176 1.00000000 0.00000000,0.29824561 1.00000000 0.00000000,0.31578946 1.00000000 0.00000000,
+0.33333334 1.00000000 0.00000000,0.35087720 1.00000000 0.00000000,0.36842105 1.00000000 0.00000000,0.38596490 1.00000000 0.00000000,0.40350878 1.00000000 0.00000000,0.42105263 1.00000000 0.00000000,0.43859649 1.00000000 0.00000000,0.45614034 1.00000000 0.00000000,0.47368422 1.00000000 0.00000000,0.49122807 1.00000000 0.00000000,0.50877196 1.00000000 0.00000000,0.52631581 1.00000000 0.00000000,0.54385966 1.00000000 0.00000000,0.56140351 1.00000000 0.00000000,0.57894737 1.00000000 0.00000000,0.59649122 1.00000000 0.00000000,0.61403507 1.00000000 0.00000000,0.63157892 1.00000000 0.00000000,0.64912283 1.00000000 0.00000000,0.66666669 1.00000000 0.00000000,
+0.68421054 1.00000000 0.00000000,0.70175439 1.00000000 0.00000000,0.71929824 1.00000000 0.00000000,0.73684210 1.00000000 0.00000000,0.75438595 1.00000000 0.00000000,0.77192980 1.00000000 0.00000000,0.78947371 1.00000000 0.00000000,0.80701756 1.00000000 0.00000000,0.82456142 1.00000000 0.00000000,0.84210527 1.00000000 0.00000000,0.85964912 1.00000000 0.00000000,0.87719297 1.00000000 0.00000000,0.89473683 1.00000000 0.00000000,0.91228068 1.00000000 0.00000000,0.92982459 1.00000000 0.00000000,0.94736844 1.00000000 0.00000000,0.96491230 1.00000000 0.00000000,0.98245615 1.00000000 0.00000000,1.00000000 1.00000000 0.00000000,1.00000000 0.98245615 0.00000000,
+1.00000000 0.96491230 0.00000000,1.00000000 0.94736844 0.00000000,1.00000000 0.92982459 0.00000000,1.00000000 0.91228068 0.00000000,1.00000000 0.89473683 0.00000000,1.00000000 0.87719297 0.00000000,1.00000000 0.85964912 0.00000000,1.00000000 0.84210527 0.00000000,1.00000000 0.82456142 0.00000000,1.00000000 0.80701756 0.00000000,1.00000000 0.78947365 0.00000000,1.00000000 0.77192986 0.00000000,1.00000000 0.75438595 0.00000000,1.00000000 0.73684210 0.00000000,1.00000000 0.71929824 0.00000000,1.00000000 0.70175439 0.00000000,1.00000000 0.68421054 0.00000000,1.00000000 0.66666663 0.00000000,1.00000000 0.64912283 0.00000000,1.00000000 0.63157892 0.00000000,
+1.00000000 0.61403513 0.00000000,1.00000000 0.59649122 0.00000000,1.00000000 0.57894737 0.00000000,1.00000000 0.56140351 0.00000000,1.00000000 0.54385966 0.00000000,1.00000000 0.52631581 0.00000000,1.00000000 0.50877190 0.00000000,1.00000000 0.49122804 0.00000000,1.00000000 0.47368419 0.00000000,1.00000000 0.45614034 0.00000000,1.00000000 0.43859649 0.00000000,1.00000000 0.42105263 0.00000000,1.00000000 0.40350878 0.00000000,1.00000000 0.38596493 0.00000000,1.00000000 0.36842108 0.00000000,1.00000000 0.35087717 0.00000000,1.00000000 0.33333331 0.00000000,1.00000000 0.31578946 0.00000000,1.00000000 0.29824561 0.00000000,1.00000000 0.28070176 0.00000000,
+1.00000000 0.26315790 0.00000000,1.00000000 0.24561405 0.00000000,1.00000000 0.22807020 0.00000000,1.00000000 0.21052629 0.00000000,1.00000000 0.19298244 0.00000000,1.00000000 0.17543858 0.00000000,1.00000000 0.15789473 0.00000000,1.00000000 0.14035088 0.00000000,1.00000000 0.12280703 0.00000000,1.00000000 0.10526317 0.00000000,1.00000000 0.08771932 0.00000000,1.00000000 0.07017541 0.00000000,1.00000000 0.05263156 0.00000000,1.00000000 0.03508770 0.00000000,1.00000000 0.01754385 0.00000000,1.00000000 0.00000000 0.00000000</mColorCodingColorTable>
+<bpPixelClassificationProperties mTrainingVisibility="true" mPredictionVisibility="true" mTrainingVoxelVisibility="false" mInterpolateEnable="true"/>
+</bpMegaSurfacesProperties>
+<bpTracksProperties mColorCoding="eColormap" mColorCodingFilterType="" mColorCodingShowScale="true" mColorCodingScaleShowTitle="true" mColorCodingScaleShowRange="true" mColorCodingRangeMin="0" mColorCodingRangeMax="0" mTransparency="0" mLabelVisibilityString="" mLabelColorString="" mLabelStateString="" mLabelGroupPropertyString="" mlabelPropertyMapString="" mShowObjectsWithNoLabel="true" mLabelColorMode="eLabelOnly" mBaseColor="1 1 1" mMaterialPresetName="Basic" mMaterialPresetFresnelScale="0.75" mMaterialPresetFresnelAlphaScale="1" mMaterialPresetUseNormalMap="true" mEnableSlicer="false" mSlicerPoint="-340282346638528859811704183484516925440.00000000 0.00000000 0.00000000" mSlicerNormal="0.00000000 0.00000000 1.00000000" mSlicerExtendedSection="0" mSlicerRenderMode="eRenderModeColoredBorder" mImageId="0" mIndependentSlicer="false" mUnit="" mDisplay="eOn" mStyle="eLine" mLineWidth="1" mCylinderDiameter="0" mRenderQuality="0.5" mEnabledDirectPath="false" mDirectPathRadiusScale="1" mEnabledDragonTail="false" mDragonTailBackwardNanoSeconds="0" mDragonTailForwardNanoSeconds="0">
+<mColorCodingTextMaterial mDiffusion="0 0 0" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorCodingColorTable/>
+<mTracksBaseMaterial mDiffusion="0.8 0.8 0.8" mSpecular="0.2 0.2 0.2" mEmission="0.2 0.2 0.2" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mTracksDirectPathMaterial mDiffusion="1 1 1" mSpecular="0 0 0" mEmission="0 0 0" mAmbient="0.2 0.2 0.2" mTransparency="0" mShinyness="0.2"/>
+<mColorMappingTable/>
+</bpTracksProperties>
+<SurfacesBoundingBox mVolumeRenderingMode="MaxIntensityProjection" mBorderWidth="0.00000000 0.00000000 0.00000000"/>
+  <bpSurfacesId Value="700003"/>
+  <bpContourEditor>
+    <imageId>100001</imageId>
+    <slicerDirection>2</slicerDirection>
+    <planeVisibility>eNone</planeVisibility>
+    <autoResolution>true</autoResolution>
+    <resolutionFactor>0.500</resolutionFactor>
+    <preserveFeatures>false</preserveFeatures>
+    <autofitContinuityWeight>1.200</autofitContinuityWeight>
+    <autofitCurvatureWeight>1.000</autofitCurvatureWeight>
+    <autofitImageEnergyWeight>1.200</autofitImageEnergyWeight>
+    <autofitNeighbourhoodSize>3</autofitNeighbourhoodSize>
+    <autofitRelativeGaussSigma>1.000</autofitRelativeGaussSigma>
+    <autofitMaximumIterations>10</autofitMaximumIterations>
+    <autofitScaleSpaceContinuationIterations>2</autofitScaleSpaceContinuationIterations>
+    <autofitPresetImpact>2</autofitPresetImpact>
+    <autofitPresetShape>2</autofitPresetShape>
+    <autofitUsePreset>true</autofitUsePreset>
+    <selectedChannelIndex>0</selectedChannelIndex>
+    <channelSelection>1</channelSelection>
+  </bpContourEditor>
+  <bpContour>
+  </bpContour>
+</bpSurfacesModelViewer>
+</bpSurfaceComponent>
+</bpComponentGroup>
+<SoPerspectiveCamera>
+</SoPerspectiveCamera>
+<SurpassSoPerspectiveCamera>
+  <SurpassSoPerspectiveCameraviewportMapping>3</SurpassSoPerspectiveCameraviewportMapping>
+  <SurpassSoPerspectiveCameraposition>(-0.192, 0.143, -1.765)</SurpassSoPerspectiveCameraposition>
+  <SurpassSoPerspectiveCameraorientation>(0.109, 0.993, 0.033, 3.228)</SurpassSoPerspectiveCameraorientation>
+  <SurpassSoPerspectiveCameraaspectRatio>1.000</SurpassSoPerspectiveCameraaspectRatio>
+  <SurpassSoPerspectiveCamerafocalDistance>1.780</SurpassSoPerspectiveCamerafocalDistance>
+  <SurpassSoPerspectiveCameraheightAngle>0.785</SurpassSoPerspectiveCameraheightAngle>
+  <SurpassSoPerspectiveCamerarelative>true</SurpassSoPerspectiveCamerarelative>
+</SurpassSoPerspectiveCamera>
+<SurpassSoOrthographicCamera>
+  <SurpassSoOrthographicCameraviewportMapping>3</SurpassSoOrthographicCameraviewportMapping>
+  <SurpassSoOrthographicCameraposition>(-0.192, 0.143, -1.765)</SurpassSoOrthographicCameraposition>
+  <SurpassSoOrthographicCameraorientation>(0.109, 0.993, 0.033, 3.228)</SurpassSoOrthographicCameraorientation>
+  <SurpassSoOrthographicCameraaspectRatio>1.000</SurpassSoOrthographicCameraaspectRatio>
+  <SurpassSoOrthographicCamerafocalDistance>308.373</SurpassSoOrthographicCamerafocalDistance>
+  <SurpassSoOrthographicCameraheight>0.012</SurpassSoOrthographicCameraheight>
+  <SurpassSoOrthographicCamerarelative>true</SurpassSoOrthographicCamerarelative>
+</SurpassSoOrthographicCamera>
+<VantageSoPerspectiveCamera>
+  <VantageSoPerspectiveCameraviewportMapping>3</VantageSoPerspectiveCameraviewportMapping>
+  <VantageSoPerspectiveCameraposition>(-0.612, 0.612, 28.158)</VantageSoPerspectiveCameraposition>
+  <VantageSoPerspectiveCameraorientation>(-1.000, 0.000, 0.000, 3.142)</VantageSoPerspectiveCameraorientation>
+  <VantageSoPerspectiveCameraaspectRatio>1.000</VantageSoPerspectiveCameraaspectRatio>
+  <VantageSoPerspectiveCamerafocalDistance>0.029</VantageSoPerspectiveCamerafocalDistance>
+  <VantageSoPerspectiveCameraheightAngle>0.785</VantageSoPerspectiveCameraheightAngle>
+  <VantageSoPerspectiveCamerarelative>true</VantageSoPerspectiveCamerarelative>
+</VantageSoPerspectiveCamera>
+<VantageSoOrthographicCamera>
+  <VantageSoOrthographicCameraviewportMapping>3</VantageSoOrthographicCameraviewportMapping>
+  <VantageSoOrthographicCameraposition>(-0.612, 0.612, 28.158)</VantageSoOrthographicCameraposition>
+  <VantageSoOrthographicCameraorientation>(-1.000, 0.000, 0.000, 3.142)</VantageSoOrthographicCameraorientation>
+  <VantageSoOrthographicCameraaspectRatio>1.000</VantageSoOrthographicCameraaspectRatio>
+  <VantageSoOrthographicCamerafocalDistance>5.000</VantageSoOrthographicCamerafocalDistance>
+  <VantageSoOrthographicCameraheight>0.012</VantageSoOrthographicCameraheight>
+  <VantageSoOrthographicCamerarelative>true</VantageSoOrthographicCamerarelative>
+</VantageSoOrthographicCamera>
+<bpKeyFrameAnimatorDialog>
+<bpCommandKeyframeDeleteAll actorname = "bpKeyFrameAnimatorDialog" actorid = "29"/>
+<PlayBackStateCamera>true</PlayBackStateCamera>
+<PlayBackStateTimePoints>true</PlayBackStateTimePoints>
+<PlayBackStateClippingPlanes>true</PlayBackStateClippingPlanes>
+<PlayBackStateOrthoSlicers>true</PlayBackStateOrthoSlicers>
+<PlayBackStateObliqueSlicers>true</PlayBackStateObliqueSlicers>
+<PlayBackStateObjectsSlicers>true</PlayBackStateObjectsSlicers>
+<PlayBackStateShowHides>true</PlayBackStateShowHides>
+<PlayBackStateColors>true</PlayBackStateColors>
+<PlayBackStateDisplayAdjustment>true</PlayBackStateDisplayAdjustment>
+<KeyFrameAnimationPlayback>Repeat</KeyFrameAnimationPlayback>
+<KeyFrameAnimationNumberOfFrames>200</KeyFrameAnimationNumberOfFrames>
+<KeyFrameAnimationFrameRate>24.000</KeyFrameAnimationFrameRate>
+<KeyFrameSizeX>1600</KeyFrameSizeX>
+<KeyFrameSizeY>1200</KeyFrameSizeY>
+<PixelScale>1.335</PixelScale>
+</bpKeyFrameAnimatorDialog>
+</bpSurfaceApplication>
+</WorkflowSnapshotScene>
+<WorkflowSnapshotState>
+<bpCommandChannelSelection actorname = "bpImarisApplication" actorid = "1" value = "off off off "/><bpChangeColorCommand actorname = "bpImarisApplication" actorid = "1" n = "3" red = "1.000 1.000 1.000" green = "1.000 1.000 1.000" blue = "1.000 1.000 1.000" opacity = "1.000 1.000 1.000" rangemin = "0.000 0.000 0.000" rangemax = "11596.000 4555.909 4993.000" channels = "on on on " gamma = "1.000 1.000 1.000" mode = "TableColor TableColor TableColor" tablelength = "256 256 256" table = "0.000 0.000 0.000 0.000 0.000 0.004 0.000 0.000 0.008 0.000 0.000 0.012 0.000 0.000 0.016 0.000 0.000 0.020 0.000 0.000 0.024 0.000 0.000 0.027 0.000 0.000 0.031 0.000 0.000 0.035 0.000 0.000 0.039 0.000 0.000 0.043 0.000 0.000 0.047 0.000 0.000 0.051 0.000 0.000 0.055 0.000 0.000 0.059 0.000 0.000 0.063 0.000 0.000 0.067 0.000 0.000 0.071 0.000 0.000 0.075 0.000 0.000 0.078 0.000 0.000 0.082 0.000 0.000 0.086 0.000 0.000 0.090 0.000 0.000 0.094 0.000 0.000 0.098 0.000 0.000 0.102 0.000 0.000 0.106 0.000 0.000 0.110 0.000 0.000 0.114 0.000 0.000 0.118 0.000 0.000 0.122 0.000 0.000 0.125 0.000 0.000 0.129 0.000 0.000 0.133 0.000 0.000 0.137 0.000 0.000 0.141 0.000 0.000 0.145 0.000 0.000 0.149 0.000 0.000 0.153 0.000 0.000 0.157 0.000 0.000 0.161 0.000 0.000 0.165 0.000 0.000 0.169 0.000 0.000 0.173 0.000 0.000 0.176 0.000 0.000 0.180 0.000 0.000 0.184 0.000 0.000 0.188 0.000 0.000 0.192 0.000 0.000 0.196 0.000 0.000 0.200 0.000 0.000 0.204 0.000 0.000 0.208 0.000 0.000 0.212 0.000 0.000 0.216 0.000 0.000 0.220 0.000 0.000 0.224 0.000 0.000 0.227 0.000 0.000 0.231 0.000 0.000 0.235 0.000 0.000 0.239 0.000 0.000 0.243 0.000 0.000 0.247 0.000 0.000 0.251 0.000 0.000 0.255 0.000 0.000 0.259 0.000 0.000 0.263 0.000 0.000 0.267 0.000 0.000 0.271 0.000 0.000 0.275 0.000 0.000 0.278 0.000 0.000 0.282 0.000 0.000 0.286 0.000 0.000 0.290 0.000 0.000 0.294 0.000 0.000 0.298 0.000 0.000 0.302 0.000 0.000 0.306 0.000 0.000 0.310 0.000 0.000 0.314 0.000 0.000 0.318 0.000 0.000 0.322 0.000 0.000 0.325 0.000 0.000 0.329 0.000 0.000 0.333 0.000 0.000 0.337 0.000 0.000 0.341 0.000 0.000 0.345 0.000 0.000 0.349 0.000 0.000 0.353 0.000 0.000 0.357 0.000 0.000 0.361 0.000 0.000 0.365 0.000 0.000 0.369 0.000 0.000 0.373 0.000 0.000 0.376 0.000 0.000 0.380 0.000 0.000 0.384 0.000 0.000 0.388 0.000 0.000 0.392 0.000 0.000 0.396 0.000 0.000 0.400 0.000 0.000 0.404 0.000 0.000 0.408 0.000 0.000 0.412 0.000 0.000 0.416 0.000 0.000 0.420 0.000 0.000 0.424 0.000 0.000 0.427 0.000 0.000 0.431 0.000 0.000 0.435 0.000 0.000 0.439 0.000 0.000 0.443 0.000 0.000 0.447 0.000 0.000 0.451 0.000 0.000 0.455 0.000 0.000 0.459 0.000 0.000 0.463 0.000 0.000 0.467 0.000 0.000 0.471 0.000 0.000 0.475 0.000 0.000 0.478 0.000 0.000 0.482 0.000 0.000 0.486 0.000 0.000 0.490 0.000 0.000 0.494 0.000 0.000 0.498 0.000 0.000 0.502 0.000 0.000 0.506 0.000 0.000 0.510 0.000 0.000 0.514 0.000 0.000 0.518 0.000 0.000 0.522 0.000 0.000 0.525 0.000 0.000 0.529 0.000 0.000 0.533 0.000 0.000 0.537 0.000 0.000 0.541 0.000 0.000 0.545 0.000 0.000 0.549 0.000 0.000 0.553 0.000 0.000 0.557 0.000 0.000 0.561 0.000 0.000 0.565 0.000 0.000 0.569 0.000 0.000 0.573 0.000 0.000 0.576 0.000 0.000 0.580 0.000 0.000 0.584 0.000 0.000 0.588 0.000 0.000 0.592 0.000 0.000 0.596 0.000 0.000 0.600 0.000 0.000 0.604 0.000 0.000 0.608 0.000 0.000 0.612 0.000 0.000 0.616 0.000 0.000 0.620 0.000 0.000 0.624 0.000 0.000 0.627 0.000 0.000 0.631 0.000 0.000 0.635 0.000 0.000 0.639 0.000 0.000 0.643 0.000 0.000 0.647 0.000 0.000 0.651 0.000 0.000 0.655 0.000 0.000 0.659 0.000 0.000 0.663 0.000 0.000 0.667 0.000 0.000 0.671 0.000 0.000 0.675 0.000 0.000 0.678 0.000 0.000 0.682 0.000 0.000 0.686 0.000 0.000 0.690 0.000 0.000 0.694 0.000 0.000 0.698 0.000 0.000 0.702 0.000 0.000 0.706 0.000 0.000 0.710 0.000 0.000 0.714 0.000 0.000 0.718 0.000 0.000 0.722 0.000 0.000 0.725 0.000 0.000 0.729 0.000 0.000 0.733 0.000 0.000 0.737 0.000 0.000 0.741 0.000 0.000 0.745 0.000 0.000 0.749 0.000 0.000 0.753 0.000 0.000 0.757 0.000 0.000 0.761 0.000 0.000 0.765 0.000 0.000 0.769 0.000 0.000 0.773 0.000 0.000 0.776 0.000 0.000 0.780 0.000 0.000 0.784 0.000 0.000 0.788 0.000 0.000 0.792 0.000 0.000 0.796 0.000 0.000 0.800 0.000 0.000 0.804 0.000 0.000 0.808 0.000 0.000 0.812 0.000 0.000 0.816 0.000 0.000 0.820 0.000 0.000 0.824 0.000 0.000 0.827 0.000 0.000 0.831 0.000 0.000 0.835 0.000 0.000 0.839 0.000 0.000 0.843 0.000 0.000 0.847 0.000 0.000 0.851 0.000 0.000 0.855 0.000 0.000 0.859 0.000 0.000 0.863 0.000 0.000 0.867 0.000 0.000 0.871 0.000 0.000 0.875 0.000 0.000 0.878 0.000 0.000 0.882 0.000 0.000 0.886 0.000 0.000 0.890 0.000 0.000 0.894 0.000 0.000 0.898 0.000 0.000 0.902 0.000 0.000 0.906 0.000 0.000 0.910 0.000 0.000 0.914 0.000 0.000 0.918 0.000 0.000 0.922 0.000 0.000 0.925 0.000 0.000 0.929 0.000 0.000 0.933 0.000 0.000 0.937 0.000 0.000 0.941 0.000 0.000 0.945 0.000 0.000 0.949 0.000 0.000 0.953 0.000 0.000 0.957 0.000 0.000 0.961 0.000 0.000 0.965 0.000 0.000 0.969 0.000 0.000 0.973 0.000 0.000 0.976 0.000 0.000 0.980 0.000 0.000 0.984 0.000 0.000 0.988 0.000 0.000 0.992 0.000 0.000 0.996 0.000 0.000 1.000 0.000 0.000 0.000 0.000 0.004 0.000 0.000 0.008 0.000 0.000 0.012 0.000 0.000 0.016 0.000 0.000 0.020 0.000 0.000 0.024 0.000 0.000 0.027 0.000 0.000 0.031 0.000 0.000 0.035 0.000 0.000 0.039 0.000 0.000 0.043 0.000 0.000 0.047 0.000 0.000 0.051 0.000 0.000 0.055 0.000 0.000 0.059 0.000 0.000 0.063 0.000 0.000 0.067 0.000 0.000 0.071 0.000 0.000 0.075 0.000 0.000 0.078 0.000 0.000 0.082 0.000 0.000 0.086 0.000 0.000 0.090 0.000 0.000 0.094 0.000 0.000 0.098 0.000 0.000 0.102 0.000 0.000 0.106 0.000 0.000 0.110 0.000 0.000 0.114 0.000 0.000 0.118 0.000 0.000 0.122 0.000 0.000 0.125 0.000 0.000 0.129 0.000 0.000 0.133 0.000 0.000 0.137 0.000 0.000 0.141 0.000 0.000 0.145 0.000 0.000 0.149 0.000 0.000 0.153 0.000 0.000 0.157 0.000 0.000 0.161 0.000 0.000 0.165 0.000 0.000 0.169 0.000 0.000 0.173 0.000 0.000 0.176 0.000 0.000 0.180 0.000 0.000 0.184 0.000 0.000 0.188 0.000 0.000 0.192 0.000 0.000 0.196 0.000 0.000 0.200 0.000 0.000 0.204 0.000 0.000 0.208 0.000 0.000 0.212 0.000 0.000 0.216 0.000 0.000 0.220 0.000 0.000 0.224 0.000 0.000 0.227 0.000 0.000 0.231 0.000 0.000 0.235 0.000 0.000 0.239 0.000 0.000 0.243 0.000 0.000 0.247 0.000 0.000 0.251 0.000 0.000 0.255 0.000 0.000 0.259 0.000 0.000 0.263 0.000 0.000 0.267 0.000 0.000 0.271 0.000 0.000 0.275 0.000 0.000 0.278 0.000 0.000 0.282 0.000 0.000 0.286 0.000 0.000 0.290 0.000 0.000 0.294 0.000 0.000 0.298 0.000 0.000 0.302 0.000 0.000 0.306 0.000 0.000 0.310 0.000 0.000 0.314 0.000 0.000 0.318 0.000 0.000 0.322 0.000 0.000 0.325 0.000 0.000 0.329 0.000 0.000 0.333 0.000 0.000 0.337 0.000 0.000 0.341 0.000 0.000 0.345 0.000 0.000 0.349 0.000 0.000 0.353 0.000 0.000 0.357 0.000 0.000 0.361 0.000 0.000 0.365 0.000 0.000 0.369 0.000 0.000 0.373 0.000 0.000 0.376 0.000 0.000 0.380 0.000 0.000 0.384 0.000 0.000 0.388 0.000 0.000 0.392 0.000 0.000 0.396 0.000 0.000 0.400 0.000 0.000 0.404 0.000 0.000 0.408 0.000 0.000 0.412 0.000 0.000 0.416 0.000 0.000 0.420 0.000 0.000 0.424 0.000 0.000 0.427 0.000 0.000 0.431 0.000 0.000 0.435 0.000 0.000 0.439 0.000 0.000 0.443 0.000 0.000 0.447 0.000 0.000 0.451 0.000 0.000 0.455 0.000 0.000 0.459 0.000 0.000 0.463 0.000 0.000 0.467 0.000 0.000 0.471 0.000 0.000 0.475 0.000 0.000 0.478 0.000 0.000 0.482 0.000 0.000 0.486 0.000 0.000 0.490 0.000 0.000 0.494 0.000 0.000 0.498 0.000 0.000 0.502 0.000 0.000 0.506 0.000 0.000 0.510 0.000 0.000 0.514 0.000 0.000 0.518 0.000 0.000 0.522 0.000 0.000 0.525 0.000 0.000 0.529 0.000 0.000 0.533 0.000 0.000 0.537 0.000 0.000 0.541 0.000 0.000 0.545 0.000 0.000 0.549 0.000 0.000 0.553 0.000 0.000 0.557 0.000 0.000 0.561 0.000 0.000 0.565 0.000 0.000 0.569 0.000 0.000 0.573 0.000 0.000 0.576 0.000 0.000 0.580 0.000 0.000 0.584 0.000 0.000 0.588 0.000 0.000 0.592 0.000 0.000 0.596 0.000 0.000 0.600 0.000 0.000 0.604 0.000 0.000 0.608 0.000 0.000 0.612 0.000 0.000 0.616 0.000 0.000 0.620 0.000 0.000 0.624 0.000 0.000 0.627 0.000 0.000 0.631 0.000 0.000 0.635 0.000 0.000 0.639 0.000 0.000 0.643 0.000 0.000 0.647 0.000 0.000 0.651 0.000 0.000 0.655 0.000 0.000 0.659 0.000 0.000 0.663 0.000 0.000 0.667 0.000 0.000 0.671 0.000 0.000 0.675 0.000 0.000 0.678 0.000 0.000 0.682 0.000 0.000 0.686 0.000 0.000 0.690 0.000 0.000 0.694 0.000 0.000 0.698 0.000 0.000 0.702 0.000 0.000 0.706 0.000 0.000 0.710 0.000 0.000 0.714 0.000 0.000 0.718 0.000 0.000 0.722 0.000 0.000 0.725 0.000 0.000 0.729 0.000 0.000 0.733 0.000 0.000 0.737 0.000 0.000 0.741 0.000 0.000 0.745 0.000 0.000 0.749 0.000 0.000 0.753 0.000 0.000 0.757 0.000 0.000 0.761 0.000 0.000 0.765 0.000 0.000 0.769 0.000 0.000 0.773 0.000 0.000 0.776 0.000 0.000 0.780 0.000 0.000 0.784 0.000 0.000 0.788 0.000 0.000 0.792 0.000 0.000 0.796 0.000 0.000 0.800 0.000 0.000 0.804 0.000 0.000 0.808 0.000 0.000 0.812 0.000 0.000 0.816 0.000 0.000 0.820 0.000 0.000 0.824 0.000 0.000 0.827 0.000 0.000 0.831 0.000 0.000 0.835 0.000 0.000 0.839 0.000 0.000 0.843 0.000 0.000 0.847 0.000 0.000 0.851 0.000 0.000 0.855 0.000 0.000 0.859 0.000 0.000 0.863 0.000 0.000 0.867 0.000 0.000 0.871 0.000 0.000 0.875 0.000 0.000 0.878 0.000 0.000 0.882 0.000 0.000 0.886 0.000 0.000 0.890 0.000 0.000 0.894 0.000 0.000 0.898 0.000 0.000 0.902 0.000 0.000 0.906 0.000 0.000 0.910 0.000 0.000 0.914 0.000 0.000 0.918 0.000 0.000 0.922 0.000 0.000 0.925 0.000 0.000 0.929 0.000 0.000 0.933 0.000 0.000 0.937 0.000 0.000 0.941 0.000 0.000 0.945 0.000 0.000 0.949 0.000 0.000 0.953 0.000 0.000 0.957 0.000 0.000 0.961 0.000 0.000 0.965 0.000 0.000 0.969 0.000 0.000 0.973 0.000 0.000 0.976 0.000 0.000 0.980 0.000 0.000 0.984 0.000 0.000 0.988 0.000 0.000 0.992 0.000 0.000 0.996 0.000 0.000 1.000 0.000 0.000 0.000 0.000 0.004 0.000 0.004 0.008 0.000 0.008 0.012 0.000 0.012 0.016 0.000 0.016 0.020 0.000 0.020 0.024 0.000 0.024 0.027 0.000 0.027 0.031 0.000 0.031 0.035 0.000 0.035 0.039 0.000 0.039 0.043 0.000 0.043 0.047 0.000 0.047 0.051 0.000 0.051 0.055 0.000 0.055 0.059 0.000 0.059 0.063 0.000 0.063 0.067 0.000 0.067 0.071 0.000 0.071 0.075 0.000 0.075 0.078 0.000 0.078 0.082 0.000 0.082 0.086 0.000 0.086 0.090 0.000 0.090 0.094 0.000 0.094 0.098 0.000 0.098 0.102 0.000 0.102 0.106 0.000 0.106 0.110 0.000 0.110 0.114 0.000 0.114 0.118 0.000 0.118 0.122 0.000 0.122 0.125 0.000 0.125 0.129 0.000 0.129 0.133 0.000 0.133 0.137 0.000 0.137 0.141 0.000 0.141 0.145 0.000 0.145 0.149 0.000 0.149 0.153 0.000 0.153 0.157 0.000 0.157 0.161 0.000 0.161 0.165 0.000 0.165 0.169 0.000 0.169 0.173 0.000 0.173 0.176 0.000 0.176 0.180 0.000 0.180 0.184 0.000 0.184 0.188 0.000 0.188 0.192 0.000 0.192 0.196 0.000 0.196 0.200 0.000 0.200 0.204 0.000 0.204 0.208 0.000 0.208 0.212 0.000 0.212 0.216 0.000 0.216 0.220 0.000 0.220 0.224 0.000 0.224 0.227 0.000 0.227 0.231 0.000 0.231 0.235 0.000 0.235 0.239 0.000 0.239 0.243 0.000 0.243 0.247 0.000 0.247 0.251 0.000 0.251 0.255 0.000 0.255 0.259 0.000 0.259 0.263 0.000 0.263 0.267 0.000 0.267 0.271 0.000 0.271 0.275 0.000 0.275 0.278 0.000 0.278 0.282 0.000 0.282 0.286 0.000 0.286 0.290 0.000 0.290 0.294 0.000 0.294 0.298 0.000 0.298 0.302 0.000 0.302 0.306 0.000 0.306 0.310 0.000 0.310 0.314 0.000 0.314 0.318 0.000 0.318 0.322 0.000 0.322 0.325 0.000 0.325 0.329 0.000 0.329 0.333 0.000 0.333 0.337 0.000 0.337 0.341 0.000 0.341 0.345 0.000 0.345 0.349 0.000 0.349 0.353 0.000 0.353 0.357 0.000 0.357 0.361 0.000 0.361 0.365 0.000 0.365 0.369 0.000 0.369 0.373 0.000 0.373 0.376 0.000 0.376 0.380 0.000 0.380 0.384 0.000 0.384 0.388 0.000 0.388 0.392 0.000 0.392 0.396 0.000 0.396 0.400 0.000 0.400 0.404 0.000 0.404 0.408 0.000 0.408 0.412 0.000 0.412 0.416 0.000 0.416 0.420 0.000 0.420 0.424 0.000 0.424 0.427 0.000 0.427 0.431 0.000 0.431 0.435 0.000 0.435 0.439 0.000 0.439 0.443 0.000 0.443 0.447 0.000 0.447 0.451 0.000 0.451 0.455 0.000 0.455 0.459 0.000 0.459 0.463 0.000 0.463 0.467 0.000 0.467 0.471 0.000 0.471 0.475 0.000 0.475 0.478 0.000 0.478 0.482 0.000 0.482 0.486 0.000 0.486 0.490 0.000 0.490 0.494 0.000 0.494 0.498 0.000 0.498 0.502 0.000 0.502 0.506 0.000 0.506 0.510 0.000 0.510 0.514 0.000 0.514 0.518 0.000 0.518 0.522 0.000 0.522 0.525 0.000 0.525 0.529 0.000 0.529 0.533 0.000 0.533 0.537 0.000 0.537 0.541 0.000 0.541 0.545 0.000 0.545 0.549 0.000 0.549 0.553 0.000 0.553 0.557 0.000 0.557 0.561 0.000 0.561 0.565 0.000 0.565 0.569 0.000 0.569 0.573 0.000 0.573 0.576 0.000 0.576 0.580 0.000 0.580 0.584 0.000 0.584 0.588 0.000 0.588 0.592 0.000 0.592 0.596 0.000 0.596 0.600 0.000 0.600 0.604 0.000 0.604 0.608 0.000 0.608 0.612 0.000 0.612 0.616 0.000 0.616 0.620 0.000 0.620 0.624 0.000 0.624 0.627 0.000 0.627 0.631 0.000 0.631 0.635 0.000 0.635 0.639 0.000 0.639 0.643 0.000 0.643 0.647 0.000 0.647 0.651 0.000 0.651 0.655 0.000 0.655 0.659 0.000 0.659 0.663 0.000 0.663 0.667 0.000 0.667 0.671 0.000 0.671 0.675 0.000 0.675 0.678 0.000 0.678 0.682 0.000 0.682 0.686 0.000 0.686 0.690 0.000 0.690 0.694 0.000 0.694 0.698 0.000 0.698 0.702 0.000 0.702 0.706 0.000 0.706 0.710 0.000 0.710 0.714 0.000 0.714 0.718 0.000 0.718 0.722 0.000 0.722 0.725 0.000 0.725 0.729 0.000 0.729 0.733 0.000 0.733 0.737 0.000 0.737 0.741 0.000 0.741 0.745 0.000 0.745 0.749 0.000 0.749 0.753 0.000 0.753 0.757 0.000 0.757 0.761 0.000 0.761 0.765 0.000 0.765 0.769 0.000 0.769 0.773 0.000 0.773 0.776 0.000 0.776 0.780 0.000 0.780 0.784 0.000 0.784 0.788 0.000 0.788 0.792 0.000 0.792 0.796 0.000 0.796 0.800 0.000 0.800 0.804 0.000 0.804 0.808 0.000 0.808 0.812 0.000 0.812 0.816 0.000 0.816 0.820 0.000 0.820 0.824 0.000 0.824 0.827 0.000 0.827 0.831 0.000 0.831 0.835 0.000 0.835 0.839 0.000 0.839 0.843 0.000 0.843 0.847 0.000 0.847 0.851 0.000 0.851 0.855 0.000 0.855 0.859 0.000 0.859 0.863 0.000 0.863 0.867 0.000 0.867 0.871 0.000 0.871 0.875 0.000 0.875 0.878 0.000 0.878 0.882 0.000 0.882 0.886 0.000 0.886 0.890 0.000 0.890 0.894 0.000 0.894 0.898 0.000 0.898 0.902 0.000 0.902 0.906 0.000 0.906 0.910 0.000 0.910 0.914 0.000 0.914 0.918 0.000 0.918 0.922 0.000 0.922 0.925 0.000 0.925 0.929 0.000 0.929 0.933 0.000 0.933 0.937 0.000 0.937 0.941 0.000 0.941 0.945 0.000 0.945 0.949 0.000 0.949 0.953 0.000 0.953 0.957 0.000 0.957 0.961 0.000 0.961 0.965 0.000 0.965 0.969 0.000 0.969 0.973 0.000 0.973 0.976 0.000 0.976 0.980 0.000 0.980 0.984 0.000 0.984 0.988 0.000 0.988 0.992 0.000 0.992 0.996 0.000 0.996 1.000 0.000 1.000"/><bpCommandSetTimePoint actorname = "bpImarisApplication" actorid = "1" timeinfo = "2026-08-11 15:54:40.516000000" value = "0"/>
+</WorkflowSnapshotState>
+<WorkflowSnapshotCommands>
+<bpCommandSurfaceSetCamera actorname = "bpSurfaceApplication" actorid = "5" ortho = "0" position = "-0.19192122 0.14292508 -1.76500297" rotation = "0.109 0.993 0.033 -0.043" aspect = "1.000" near = "1.666" far = "1.895" focus = "1.780" height = "0.785" viewportmaptype = "3" relative = "1"/>
+<bpCommandSnapshot actorname = "" actorid = "0" file = "D:\2025-2026\Tai\EV uptake\081126_EV_uptake\Snapshots\019_pH4_Well12_1_2026-08-28T17-07-59.280.png" savetofile = "1" savetoclipboard = "1" snapshotwidth = "1263" snapshotheight = "899" pixelscale = "1.000" snapshotresolution = "300.000" useviewportsize = "0" transparentbackground = "0"/>
+</WorkflowSnapshotCommands>
+</bpWorkflowStepSnapshot>
+</bpWorkflow>
